@@ -161,14 +161,6 @@ static float3 mColorBalanceM = float3(mColBalanceRM, mColBalanceGM, mColBalanceB
 #	include "shader/SMAA.fxsub"
 #endif
 
-#if AA_QUALITY == 6
-#	include "shader/CameraMotion.fxsub"
-#endif
-
-#if AA_QUALITY == 6
-#	include "shader/TAA.fxsub"
-#endif
-
 #include "shader/PostProcessUber.fxsub"
 
 float4 ScreenSpaceQuadVS(

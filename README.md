@@ -67,7 +67,7 @@ Features :
 * Post-Process Bokeh Depth Of Field
 * Post-Process Bloom
 * Post-Process Eye adaptation
-* Post-Process Tone-mapping (ACES-like,Reinhard,Hable,Hejl2015,NaughtyDog support)
+* Post-Process Tone-mapping (ACES-like,Reinhard,Hable,Hejl2015,NaughtyDog,Uchimura,Unreal support)
 * Post-Process Color Balance
 * Post-Process FXAA
 * Post-Process SMAA
@@ -163,3 +163,4 @@ References :
 * Percentage-Closer Soft Shadows \[[link](http://developer.download.nvidia.com/shaderlibrary/docs/shadow_PCSS.pdf)\]
 * Creating a Spherical Reflection/Environment Mapping shader \[[link](https://www.clicktorelease.com/blog/creating-spherical-environment-mapping-shader/)\]
 * Geometric Specular Aliasing \[[link](http://media.steampowered.com/apps/valve/2015/Alex_Vlachos_Advanced_VR_Rendering_GDC2015.pdf)\]
+* Tonemap operators incl. reinhard  \[[link](https://www.shadertoy.com/view/WdjSW3)\]

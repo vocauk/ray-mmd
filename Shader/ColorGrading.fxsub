@@ -210,6 +210,48 @@ float3 TonemapACES(float3 color)
 	return odt;
 }
 
+float3 TonemapUchimura(float3 color) 
+{
+	const float P = 1.0;  // max display brightness
+    const float a = 1.0;  // contrast
+    const float m = 0.22; // linear section start
+    const float l = 0.4;  // linear section length
+    const float c = 1.33; // black
+    const float b = 0.0;  // pedestal
+
+    // Uchimura 2017, "HDR theory and practice"
+    // Math: https://www.desmos.com/calculator/gslcdxvipg
+    // Source: https://www.slideshare.net/nikuque/hdr-theory-and-practicce-jp
+    float l0 = ((P - m) * l) / a;
+    float L0 = m - m / a;
+    float L1 = m + (1.0 - m) / a;
+    float S0 = m + l0;
+    float S1 = m + a * l0;
+    float C2 = (a * P) / (P - S1);
+    float CP = -C2 / P;
+
+    float3 w0 = 1.0 - smoothstep(0.0, m, color);
+    float3 w2 = step(m + l0, color);
+    float3 w1 = 1.0 - w0 - w2;
+
+    float3 T = m * pow(color / m, c) + b;
+    float3 S = P - (P - S1) * exp(CP * (color - S0));
+    float3 L = m + a * (color - m);
+
+    return T * w0 + L * w1 + S * w2;
+}
+
+float3 TonemapUnreal(float3 color) 
+{
+    // Convert color to the ACES color space
+    color = mul(RRT_SAT_MAT, mul(sRGB_2_AP1, color));
+    color = RRTAndODTFit(color);
+    color = mul(AP1_2_sRGB, mul(ODT_SAT_MAT, color));
+
+    // Apply the Unreal 3 color grading curve
+    return color / (color + 0.155) * 1.019;
+}
+
 float3 ColorToneMapping(float3 color)
 {
 #if HDR_TONEMAP_OPERATOR == 1
@@ -225,6 +267,10 @@ float3 ColorToneMapping(float3 color)
 	return saturate(TonemapACESFit(color * 1.8));
 #elif HDR_TONEMAP_OPERATOR == 6
 	return saturate(TonemapNaughtyDog(color));
+#elif HDR_TONEMAP_OPERATOR == 7
+    return saturate(TonemapUchimura(color));
+#elif HDR_TONEMAP_OPERATOR == 8
+    return saturate(TonemapUnreal(color));
 #else
 	return saturate(color);
 #endif

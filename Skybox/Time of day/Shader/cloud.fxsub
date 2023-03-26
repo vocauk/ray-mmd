@@ -22,6 +22,11 @@ float ComputeRayPlaneIntersection(float3 position, float3 viewdir, float3 n, flo
 	}
 }
 
+float3 ComputeDensity(ScatteringParams setting, float depth)
+{
+	return exp(-setting.cloudLambda * depth) * (1.0f - exp(-setting.cloudLambda * depth));
+}
+
 float ComputeClound(ScatteringParams setting, float3 P)
 {
 	float atmoHeight = length(P - setting.earthCenter) - setting.earthRadius;

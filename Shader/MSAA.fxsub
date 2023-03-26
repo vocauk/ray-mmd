@@ -1,9 +1,0 @@
-float4 msaa(float2 uv, sampler2DMS<float4> tex, int samples) {
-    float4 color = float4(0.0);
-
-    for (int i = 0; i < samples; i++) {
-        color += tex.Load(int3(uv * tex.GetDimensions().xy, i));
-    }
-
-    return color / float(samples);
-}

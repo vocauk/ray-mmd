@@ -6,14 +6,6 @@ Ray-MMD
 
 　　Ray-MMD是一个自由的,功能强大的[mikumikudance](http://www.geocities.jp/higuchuu4/index_e.htm)扩展包, 提倡以一种易于使用的方式来添加基于物理的渲染和高自由度操作. 使用hlsl语言编写, 一个基于在[mikumikueffect](https://bowlroll.net/file/35012)的DX9环境中的渲染库. 
 
-　　目前还有许多新的功能和更好的效果需要去做，只有你们的支持，Ray-MMD能走的更远，如果你喜欢我的渲染,你可以通过以下的方式来赞助，你的帮助将是非常有用的,谢谢!
-
-　　Patreon:
-<br>　　[![Patreon](https://cloud.githubusercontent.com/assets/8225057/5990484/70413560-a9ab-11e4-8942-1a63607c0b00.png)](http://www.patreon.com/cubizer)
-
-　　支付宝:
-<br>　　![Alt](https://raw.githubusercontent.com/ray-cast/ray-mmd/master/Shader/screenshots/ali.png)
-
 截图:
 ------------
 [![link text](./Shader/screenshots/screen1_small.jpg)](https://raw.githubusercontent.com/ray-cast/ray-mmd/master/Shader/screenshots/screen1.jpg)
@@ -21,15 +13,15 @@ Ray-MMD
 [![link text](./Shader/screenshots/screen3_small.jpg)](https://raw.githubusercontent.com/ray-cast/ray-mmd/master/Shader/screenshots/screen3.png)
 [![link text](./Shader/screenshots/screen4_small.jpg)](https://raw.githubusercontent.com/ray-cast/ray-mmd/master/Shader/screenshots/screen4.png)
 
-下载:
+下载
 ------------
 　[![img](https://img.shields.io/badge/version-1.3.1v2-brightgreen.svg)](https://github.com/ray-cast/ray-mmd/archive/1.3.1v2.zip)
-　[![img](https://img.shields.io/badge/version-1.4.0beta3-brightgreen.svg)](https://github.com/ray-cast/ray-mmd/archive/140beta3.zip)
+　[![img](https://img.shields.io/badge/version-1.5.0-brightgreen.svg)](https://github.com/ray-cast/ray-mmd/archive/1.5.0.zip)
 
 * [Ray-MMD - 1.3.1v2 (zip)](https://github.com/ray-cast/ray-mmd/archive/1.3.1v2.zip)  (updated: 27. Apr 2017)
 * [Ray-MMD - 1.3.1v2 (tar.gz)](https://github.com/ray-cast/ray-mmd/archive/1.3.1v2.tar.gz)  (updated: 27. Apr 2017)
-* [Ray-MMD - 1.4.0beta v2 (zip)](https://github.com/ray-cast/ray-mmd/archive/140beta2.zip) (updated: 30. Jul 2017)
-* [Ray-MMD - 1.4.0beta v2 (tar.gz)](https://github.com/ray-cast/ray-mmd/archive/140beta2.tar.gz) (updated: 30. Jul 2017)
+* [Ray-MMD - 1.5.0 (zip)](https://github.com/ray-cast/ray-mmd/archive/1.5.0.zip) (updated: 15. Jan 2018)
+* [Ray-MMD - 1.5.0 (tar.gz)](https://github.com/ray-cast/ray-mmd/archive/1.5.0.tar.gz) (updated: 15. Jan 2018)
 - 额外扩展
 	- [ColorGrading - v1.0.0 (zip)](https://github.com/MikuMikuShaders/ColorGrading/archive/v1.0.0.zip) (updated: 2. Dec 2017, \[[Github](https://github.com/MikuMikuShaders/ColorGrading)\])
 	- [FilmGrain - v1.0.0 (zip)](https://github.com/MikuMikuShaders/FilmGrain/archive/v1.0.0.zip) (updated: 2. Dec 2017, \[[Github](https://github.com/MikuMikuShaders/FilmGrain)\])
@@ -84,6 +76,7 @@ Financially supported on [Patreon](http://www.patreon.com/cubizer):
 
 #### Platinum supporters:
 * Penti_mmd
+* Robert Shawarden
 
 ##### Gold supporters:
 * Sarashina - 更科
@@ -93,6 +86,7 @@ Financially supported on [Patreon](http://www.patreon.com/cubizer):
 * urara在処
 * rin kari
 * MMD-Seraph
+* Rich El
 
 `感谢所有对我的支持! (如果你想要在这里添加或者移除请通过下面的方式来联系我)`
 
@@ -102,7 +96,7 @@ Financially supported on [Patreon](http://www.patreon.com/cubizer):
 
 * Twitter: [@Rui](https://twitter.com/Rui_cg).
 
-[协议 (MIT)](https://raw.githubusercontent.com/MikuMikuShaders/FilmGrain/master/LICENSE.txt)
+[协议 (MIT)](https://raw.githubusercontent.com/ray-cast/ray-mmd/master/LICENSE.txt)
 -------------------------------------------------------------------------------
 	Copyright (C) 2016-2018 Rui. 保留所有版权.
 
